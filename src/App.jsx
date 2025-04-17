@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import CourseForm from './components/course/CourseForm';
 import CourseListCard from './components/course/CourseListCard';
 function App() {
     const items = [
@@ -32,8 +33,9 @@ function App() {
     return (
         <>
             <main style={{ flexDirection: 'column', gap: '1rem' }}>
+                <CourseForm />
                 <CourseListCard title="강의 목록" items={items} />
-                <CourseListCard title="관심 강의 목록" items={favorateItmes} />
+                {/* <CourseListCard title="관심 강의 목록" items={favorateItmes} /> */}
             </main>
         </>
     );
